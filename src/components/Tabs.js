@@ -10,8 +10,10 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
-import list from '../list'
-import list1 from '../list1'
+import list from '../list';
+import list1 from '../list1';
+import list2 from '../list2';
+import Container from '@material-ui/core/Container';
 
 import Abc from './test'
 import {
@@ -74,54 +76,63 @@ export default function TabsData() {
 
   return (
     <div>
-      <Grid container alignItems="center">
-        <Grid item>
-          <Button>Explore the showcase</Button>
+      <Container>
+        <Grid container alignItems="center">
+          <Grid item>
+            <Button>Explore the showcase</Button>
+          </Grid>
+          <Grid item style={{ flexGrow: 1 }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              className={classes.tabs}
+            >
+              <Tab label="Popular" />
+              <Tab label="Recent" />
+              <Tab label="Cloneable" />
+            </Tabs>
+          </Grid>
+
         </Grid>
-        <Grid item style={{ flexGrow: 1 }}>
+      </Container>
+      <div style={{backgroundColor: "#E7E9EB"}}>
+        <TabPanel value={value} index={0}>
+          <Container>
           <Tabs
-            value={value}
-            onChange={handleChange}
+            value={value1}
+            onChange={handleChangeSub}
             indicatorColor="primary"
             textColor="primary"
             className={classes.tabs}
           >
-            <Tab label="Popular" />
             <Tab label="Recent" />
-            <Tab label="Clonable" />
+            <Tab label="Most Liked" />
+            <Tab label="Most Viewed" />
           </Tabs>
-        </Grid>
+          </Container>
+          <Container>
+          <TabPanel value={value1} index={0}>
 
-      </Grid>
-      <TabPanel value={value} index={0}>
+            <Abc list={list} />
 
-        <Tabs
-          value={value1}
-          onChange={handleChangeSub}
-          indicatorColor="primary"
-          textColor="primary"
-          className={classes.tabs}
-        >
-          <Tab label="Recent" />
-          <Tab label="Most Liked" />
-          <Tab label="Most Viewed" />
-        </Tabs>
+          </TabPanel>
+          </Container>
+          <Container>
+          <TabPanel value={value1} index={1}>
+            <Abc list={list1} />
 
-        <TabPanel value={value1} index={0}>
-
-       <Abc list = {list}/>
+          </TabPanel>
+          </Container>
+          <Container>
+          <TabPanel value={value1} index={2}>
+            <Abc list={list2} />
+          </TabPanel>
+          </Container>
 
         </TabPanel>
-        <TabPanel value={value1} index={1}>
-       <Abc list = {list1}/>
-        
-        </TabPanel>
-
-        <TabPanel value={value1} index={2}>
-          Item3
-        </TabPanel>
-
-      </TabPanel>
+      </div>
       <TabPanel value={value} index={1}>
         Item Two
       </TabPanel>
