@@ -15,7 +15,7 @@ import list1 from '../list1';
 import list2 from '../list2';
 import Container from '@material-ui/core/Container';
 
-import Abc from './test'
+import Abc from './Popular'
 import {
   Divider,
   Typography
@@ -97,38 +97,38 @@ export default function TabsData() {
 
         </Grid>
       </Container>
-      <div style={{backgroundColor: "#E7E9EB"}}>
+      <div style={{ backgroundColor: "#E7E9EB" }}>
         <TabPanel value={value} index={0}>
           <Container>
-          <Tabs
-            value={value1}
-            onChange={handleChangeSub}
-            indicatorColor="primary"
-            textColor="primary"
-            className={classes.tabs}
-          >
-            <Tab label="Recent" />
-            <Tab label="Most Liked" />
-            <Tab label="Most Viewed" />
-          </Tabs>
+            <Tabs
+              value={value1}
+              onChange={handleChangeSub}
+              indicatorColor="primary"
+              textColor="primary"
+              className={classes.tabs}
+            >
+              <Tab label="Recent" />
+              <Tab label="Most Liked" />
+              <Tab label="Most Viewed" />
+            </Tabs>
           </Container>
           <Container>
-          <TabPanel value={value1} index={0}>
+            <TabPanel value={value1} index={0}>
 
-            <Abc list={list} />
+              <Abc list={list} />
 
-          </TabPanel>
+            </TabPanel>
           </Container>
           <Container>
-          <TabPanel value={value1} index={1}>
-            <Abc list={list1} />
+            <TabPanel value={value1} index={1}>
+              <Abc list={list1} />
 
-          </TabPanel>
+            </TabPanel>
           </Container>
           <Container>
-          <TabPanel value={value1} index={2}>
-            <Abc list={list2} />
-          </TabPanel>
+            <TabPanel value={value1} index={2}>
+              <Abc list={list2} />
+            </TabPanel>
           </Container>
 
         </TabPanel>
