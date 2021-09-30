@@ -48,6 +48,18 @@ const useStyles = makeStyles((theme) => ({
   subheading: {
     lineHeight: 1.8
   },
+  buttonFontSize: {
+    fontSize: "14px",
+    
+    textTransform:"capitalize"
+    
+  },
+  tabslist: {
+    textTransform:"capitalize",
+    fontSize:"14px",
+    color:"black"
+   
+  },
   avatar: {
     display: "inline-block",
     border: "2px solid white",
@@ -79,7 +91,7 @@ export default function TabsData() {
       <Container>
         <Grid container alignItems="center">
           <Grid item>
-            <Button>Explore the showcase</Button>
+            <Button  className={classes.buttonFontSize}>Explore the showcase</Button>
           </Grid>
           <Grid item style={{ flexGrow: 1 }}>
             <Tabs
@@ -89,9 +101,9 @@ export default function TabsData() {
               textColor="primary"
               className={classes.tabs}
             >
-              <Tab label="Popular" />
-              <Tab label="Recent" />
-              <Tab label="Cloneable" />
+              <Tab label="Popular"  className={classes.tabslist} />
+              <Tab label="Recent"  className={classes.tabslist} />
+              <Tab label="Cloneable"  className={classes.tabslist} />
             </Tabs>
           </Grid>
 
@@ -107,9 +119,9 @@ export default function TabsData() {
               textColor="primary"
               className={classes.tabs}
             >
-              <Tab label="Recent" />
-              <Tab label="Most Liked" />
-              <Tab label="Most Viewed" />
+              <Tab label="Recent"  className={classes.tabslist}/>
+              <Tab label="Most Liked"  className={classes.tabslist} />
+              <Tab label="Most Viewed"  className={classes.tabslist} />
             </Tabs>
           </Container>
           <Container>
