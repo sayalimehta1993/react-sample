@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
+import Container from '@material-ui/core/Container';
 import {
     IconButton,
     useMediaQuery,
@@ -85,6 +86,7 @@ const NavBar = (props) => {
     return(
         <div>
             <AppBar position="static" className={classes.bg}>
+              <Container>
             <Toolbar>
               <Grid className={classes.grow16}>
                 <Button className={[classes.mainLogo]}>
@@ -124,6 +126,7 @@ const NavBar = (props) => {
                 Sign up for free
               </Button>
             </Toolbar>
+            </Container>
             </AppBar>
         </div>
     )
