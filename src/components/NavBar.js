@@ -60,10 +60,10 @@ import {
     },
   
     loginButton: {
-      background: "#e91e63",
+      background: "#0000FF",
       color: "#fff",
-      borderRadius: "25px",
-      padding: "0px 25px",
+      // borderRadius: "25px",
+      padding: "5px 11px",
   
       "&:hover": {
         background: "blue",
