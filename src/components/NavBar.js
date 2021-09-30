@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto"
   },
   buttonFontSize: {
-    fontSize: "11px",
-    color: "#a1a1a1"
+    fontSize: "13px",
+    color: "#fff"
   },
 
   AppBar: {
