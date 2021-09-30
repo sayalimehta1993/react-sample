@@ -133,13 +133,85 @@ export default function TabsData() {
 
         </TabPanel>
       </div>
-      <TabPanel value={value} index={1}>
+      {/* <TabPanel value={value} index={1}>
         Item Two
-      </TabPanel>
+      </TabPanel> */}
+      <div style={{ backgroundColor: "#E7E9EB" }}>
+        <TabPanel value={value} index={1}>
+          <Container>
+            <Tabs
+              value={value1}
+              onChange={handleChangeSub}
+              indicatorColor="primary"
+              textColor="primary"
+              className={classes.tabs}
+            >
+              <Tab label="Recent" />
+              <Tab label="Most Liked" />
+              <Tab label="Most Viewed" />
+            </Tabs>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={0}>
 
-      <TabPanel value={value} index={2}>
+              <Abc list={list} />
+
+            </TabPanel>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={1}>
+              <Abc list={list1} />
+
+            </TabPanel>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={2}>
+              <Abc list={list2} />
+            </TabPanel>
+          </Container>
+
+        </TabPanel>
+      </div>
+
+      {/* <TabPanel value={value} index={2}>
         Item Three
-      </TabPanel>
+      </TabPanel> */}
+      <div style={{ backgroundColor: "#E7E9EB" }}>
+        <TabPanel value={value} index={2}>
+          <Container>
+            <Tabs
+              value={value1}
+              onChange={handleChangeSub}
+              indicatorColor="primary"
+              textColor="primary"
+              className={classes.tabs}
+            >
+              <Tab label="Recent" />
+              <Tab label="Most Liked" />
+              <Tab label="Most Viewed" />
+            </Tabs>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={0}>
+
+              <Abc list={list} />
+
+            </TabPanel>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={1}>
+              <Abc list={list1} />
+
+            </TabPanel>
+          </Container>
+          <Container>
+            <TabPanel value={value1} index={2}>
+              <Abc list={list2} />
+            </TabPanel>
+          </Container>
+
+        </TabPanel>
+      </div>
 
     </div>
   );
