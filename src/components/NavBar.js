@@ -38,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto"
   },
   buttonFontSize: {
-    fontSize: "13px",
+    fontSize: "14px",
     color: "#fff",
+    textTransform:"capitalize"
     
   },
 
