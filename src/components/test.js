@@ -23,11 +23,11 @@ const useStyles = makeStyles((theme) => ({
       color: '#000000'
     },
     card: {
-      maxWidth: 360,
+      // maxWidth: 360,
       transition: "0.3s",
-      display: 'inline-grid',
-      padding: '30px',
-      margin: '15px',
+      display: 'inline-block',
+      padding: '15px',
+      margin: '5px',
     },
     media: {
       paddingTop: "56.25%"
